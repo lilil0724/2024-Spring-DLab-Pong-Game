@@ -1,11 +1,7 @@
 module Pong (
     input clock,
-    input p1_up,
-    input p1_down,
-    input p2_up,
-    input p2_down,
-    input start,
-
+    input keyboard_clk,
+    input keyboard_data,
     output out_Hsync,
     output out_Vsync,
     output [3:0] out_Red,
@@ -23,6 +19,11 @@ module Pong (
     parameter DEBOUNCE_DIVISOR = 50000;
     parameter BLANK = 12;
 
+    wire p1_up;
+    wire p1_down;
+    wire p2_up;
+    wire p2_down;
+    wire start;
 
     wire clock_25Mhz, debounce_clock;
     wire temp1_Hsync, temp1_Vsync, temp2_Hsync, temp2_Vsync;
@@ -31,6 +32,17 @@ module Pong (
     wire p2_up_debounced, p2_down_debounced;
     wire start_debounced;
     wire [3:0] p1_score, p2_score;
+
+    keyboard_input keyboard_input_1(
+        .clk(clk),
+        .keyboard_clk(keyboard_clk),
+        .keyboard_data(keyboard_data),
+        .p1_up(player_1_up),
+        .p1_down(player_1_down),
+        .p2_up(player_2_up),
+        .p2_down(player_2_down),
+        .start(start)
+    );
 
 
     clock_divider #(
