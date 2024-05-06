@@ -106,3 +106,8 @@ set_property PACKAGE_PIN P15 [get_ports {ssd[3]}]
 set_property PACKAGE_PIN T11 [get_ports {ssd[2]}]
 set_property PACKAGE_PIN L18 [get_ports {ssd[1]}]
 set_property PACKAGE_PIN H15 [get_ports {ssd[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports keyboard_clk]
+set_property IOSTANDARD LVCMOS33 [get_ports keyboard_data]
+set_property PACKAGE_PIN F4 [get_ports keyboard_clk]
+set_property PACKAGE_PIN B2 [get_ports keyboard_data]

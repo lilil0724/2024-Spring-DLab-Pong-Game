@@ -36,12 +36,7 @@ module Pong (
     keyboard_input keyboard_input_1(
         .clk(clk),
         .keyboard_clk(keyboard_clk),
-        .keyboard_data(keyboard_data),
-        .p1_up(player_1_up),
-        .p1_down(player_1_down),
-        .p2_up(player_2_up),
-        .p2_down(player_2_down),
-        .start(start)
+        .keyboard_data(keyboard_data)
     );
 
 

@@ -1,7 +1,7 @@
 -------------------------------------
-| Tool Version : Vivado v.2023.2.2
-| Date         : Mon May  6 22:00:32 2024
-| Host         : Moo_Laptop
+| Tool Version : Vivado v.2023.2
+| Date         : Mon May  6 23:36:24 2024
+| Host         : LAPTOP-KTP5C24J
 | Design       : design_1
 | Device       : xc7a100t-csg324-3--
 -------------------------------------
